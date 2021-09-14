@@ -2,7 +2,7 @@ package modulo1.aula4;
 
 import java.util.Scanner;
 
-public class a4_1_Produto {
+public class a4_1_EstruturaDecisaoIfElse {
 
     public static void main(String[] args) {
         boolean verdade = true; //1 - com sinal eletrico -  pulso eletrico
