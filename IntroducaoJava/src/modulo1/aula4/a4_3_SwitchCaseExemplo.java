@@ -6,7 +6,7 @@ public class a4_3_SwitchCaseExemplo {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+        System.out.println("\f");
         System.out.println("Cadastro de clientes");
         System.out.println("\t 1 -Cadastrar");
         System.out.println("\t 2 -Listar");
@@ -17,6 +17,7 @@ public class a4_3_SwitchCaseExemplo {
         switch (op){
             case 1:
                 System.out.println("Castrar clientes");
+                String ol = sc.nextLine();
                 break;
             case 2:
                 System.out.println("Listar clientes");
