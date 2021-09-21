@@ -29,8 +29,8 @@ public class a9_1_metodos {
 
     }
     static void escolha_menu(){
-        int op = ler_numero("Digite uma opção do menu:");
         int n1=0, n2=0, r=0;
+        int op = ler_numero("Digite uma opção do menu:");
 
         if(op > 0){
             n1 = ler_numero("Digite o primeiro numero: ");
