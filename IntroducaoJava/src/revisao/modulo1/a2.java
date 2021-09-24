@@ -14,7 +14,5 @@ public class a2 {
         System.out.println(lq);
         // Conversao explicita de dados
         String m1 = Character.toString(l1) + Character.toString(l2);
-
-
     }
 }

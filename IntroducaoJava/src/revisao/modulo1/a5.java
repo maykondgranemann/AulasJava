@@ -21,7 +21,8 @@ public class a5 {
         int n2 = Integer.parseInt(sc.nextLine()); //solucao para ler uma linha e pegar a parte numerica    
         System.out.println("Foi lido 5 : " + n2);
 
-        double sal1 = Double.parseDouble(sc.nextLine());
-        float sal2 = Float.parseFloat(sc.nextLine());
+        //double sal1 = Double.parseDouble(sc.nextLine());
+        //float sal2 = Float.parseFloat(sc.nextLine());
+        sc.close();
     }
 }

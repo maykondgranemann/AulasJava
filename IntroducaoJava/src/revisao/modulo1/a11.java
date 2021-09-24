@@ -16,7 +16,7 @@ public class a11 {
                 invalido =true;
             }
         }while(invalido);
-
         System.out.println("========== Obrigado ===========");
+        sc.close();
     }
 }

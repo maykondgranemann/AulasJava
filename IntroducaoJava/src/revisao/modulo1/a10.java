@@ -15,5 +15,6 @@ public class a10 {
         }
 
         System.out.println("========== Obrigado ===========");
+        sc.close();
     }
 }

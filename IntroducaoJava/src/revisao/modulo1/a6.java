@@ -20,6 +20,6 @@ public class a6 {
             System.out.println("Entrou no quarto if");
         }
 
-        boolean resultado = verdade && !executa;
+        //boolean resultado = verdade && !executa;
     }
 }

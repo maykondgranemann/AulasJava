@@ -1,6 +1,5 @@
 package modulo1;
 
-import java.math.BigDecimal;
 
 public class a4 {
     public static void main(String[] args) {

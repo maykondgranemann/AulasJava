@@ -17,13 +17,13 @@ public class a15 {
         System.out.print("Digite um número: ");
         int numero = Integer.parseInt(sc.nextLine());
 
-
         int fatorial = 1;
 
         for(int i = numero; i > 0; i--){
             System.out.printf("%d* ", i);
             fatorial = fatorial * i;
         }
+        
         System.out.printf("=%d",fatorial);
         sc.close();
     }
