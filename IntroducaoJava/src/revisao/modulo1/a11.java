@@ -17,8 +17,6 @@ public class a11 {
             }
         }while(invalido);
 
-
-
         System.out.println("========== Obrigado ===========");
     }
 }
