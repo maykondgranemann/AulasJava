@@ -1,6 +1,6 @@
 package modulo1;
 
-public class a3 {
+public class a003 {
     public static void main(String[] args) {
         // Byte = 8bits 0-255 - 11111111     
         byte min = Byte.MIN_VALUE;

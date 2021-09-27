@@ -1,7 +1,7 @@
 package modulo1;
 
 
-public class a4 {
+public class a004 {
     public static void main(String[] args) {
         //float - Single Precision = 32bits = 1 sinal - 8 expoent 23 precisao
         float minF = Float.MIN_VALUE;

@@ -10,7 +10,7 @@ import java.util.Scanner;
     //fatorial de 3 = 3*2*1 = 6
     //fatorial de 5 = 5*4*3*2*1 = 120
 
-public class a15 {
+public class a015 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

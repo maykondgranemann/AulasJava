@@ -1,6 +1,6 @@
 package modulo1;
 
-public class a9 {
+public class a009 {
     public static void main(String[] args) {
         
         int repeticoes = 1;

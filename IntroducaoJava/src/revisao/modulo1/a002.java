@@ -1,6 +1,6 @@
 package modulo1;
 
-public class a2 {
+public class a002 {
 
     public static void main(String[] args){
         //variável

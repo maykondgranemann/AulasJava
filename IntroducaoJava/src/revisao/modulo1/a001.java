@@ -1,6 +1,6 @@
 package modulo1;
 
-public class a1{
+public class a001{
     public static void main(String[] args){
         System.out.println("Maykon");
         System.out.print("Ola");

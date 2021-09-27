@@ -1,6 +1,6 @@
 package modulo1;
 
-public class a7 {
+public class a007 {
     public static void main(String[] args) {        
         byte idade = 17;
         

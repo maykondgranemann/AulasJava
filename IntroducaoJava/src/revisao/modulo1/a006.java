@@ -1,6 +1,6 @@
 package modulo1;
 
-public class a6 {
+public class a006 {
     public static void main(String[] args) {
         boolean executa = false;
         if (executa) {
