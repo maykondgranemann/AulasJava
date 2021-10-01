@@ -1,36 +1,86 @@
 import java.util.Scanner;
 
 public class AtividadeBanco {
+    static Scanner sc = new Scanner(System.in);
+    static CalculadoraTaxas calcTaxas = new CalculadoraTaxas();
+    static double taxasTransferencia = 0;
+    static double taxasSaques = 0;
+
     public static void main(String[] args) {
-        menu();
-
-    }
-    static void menu(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("\n=========== Calculadora de taxas ============\n");
-        System.out.println("\t1 - Taxa Transferencia\n\t2 - Taxa Saque");
-        System.out.println("===============================================");
-        System.out.print("Escolha uma opcao do menu: ");
-        int opcao = Integer.parseInt(sc.nextLine());
+        boolean continua;
+        do{        
+            int op = menu();
+            opcoesMenu(op);
+            continua = retornaMenu();
+        }while(continua);
+        System.out.printf("\nO valor de todas as taxas cobradas foi de %.4f, sendo %.4f de transferencias e %.4f de saques\n",
+            taxasTransferencia + taxasSaques, taxasTransferencia, taxasSaques);
         System.out.println();
+
     }
-    static void Feito()
-    {
-        CalculadoraTaxas calcTaxas = new CalculadoraTaxas();
+    static boolean retornaMenu(){
+        boolean resposta = false;
+        char resposta_continua;
 
-        double taxaT1 = calcTaxas.calculaTaxaTransferencia(1000);
-        double taxaT2 = calcTaxas.calculaTaxaTransferencia(500);
+        do{
+            System.out.println("Deseja voltar ao menu? (S/N)");
+            resposta_continua = sc.nextLine().toUpperCase().charAt(0);
+            
+            if(resposta_continua == 'S'){
+                resposta = true;
+            }
+            else if(resposta_continua == 'N'){
+                System.out.println("Até mais !!!");
+            }
+            else{
+                System.out.println("Opção invalida! Digite (S/N)!");
+            }
+        }while(resposta_continua != 'S' && resposta_continua != 'N');
 
-        double taxaS1 = calcTaxas.calculaTaxaSaque(50);
-        double taxaS2 = calcTaxas.calculaTaxaSaque(150);
-        double taxaS3 = calcTaxas.calculaTaxaSaque(500);
-        double taxaS4 = calcTaxas.calculaTaxaSaque(900);
-        double taxaS5 = calcTaxas.calculaTaxaSaque(600);
-        double taxaS6 = calcTaxas.calculaTaxaSaque(1550);
+        return resposta;
+    }
+    static void opcoesMenu(int opcao){
+        switch(opcao){
+            case 1:
+                System.out.println("============= Transferencias ===============");
+                double taxaT = transferencia();
+                taxasTransferencia += taxaT;
+                System.out.printf("O valor da taxa de transferencia foi %.4f\n\n", taxaT);
+            break;
+            case 2:
+                System.out.println("============= Saques ============= ");
+                double taxaS = saque();
+                taxasSaques += taxaS;
+                System.out.printf("\nO valor da taxa de saque foi  %.2f\n\n", taxaS);
+            break;
+        }
+    }
+    static int menu(){ 
+        int opcao;
+        do{
+            System.out.println("\n=========== Calculadora de taxas ============\n");
+            System.out.println("\t1 - Taxa Transferencia\n\t2 - Taxa Saque");
+            System.out.println("===============================================");
+            System.out.print("Escolha uma opcao do menu: ");
+            opcao = Integer.parseInt(sc.nextLine()); 
+            if(opcao <1 || opcao >2){
+                System.out.println("Opcao invalida. Digite novamente.");
+            }
+        } while(opcao <1 || opcao >2);      
 
-        System.out.printf("Os valores de taxa de transferencia foram  %.4f e %.4f\n", taxaT1, taxaT2);
+        return opcao;      
+    }
+    static double transferencia(){
+        System.out.print("Digite o valor a ser transferido: ");
+        double valor  = Double.parseDouble(sc.nextLine());
+        double taxaT = calcTaxas.calculaTaxaTransferencia(valor);
+        return taxaT;
+    }
 
-        System.out.printf("Os valores de taxa de saque foram  %.2f, %.2f, %.2f, %.2f, %.2f e %.2f\n", 
-            taxaS1, taxaS2, taxaS3, taxaS4, taxaS5, taxaS6);
+    static double saque(){
+        System.out.print("Digite o valor a ser sacado: ");
+        double valor  = Double.parseDouble(sc.nextLine());
+        double taxaS = calcTaxas.calculaTaxaSaque(valor);
+        return taxaS;
     }
 }
