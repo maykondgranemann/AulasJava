@@ -1,5 +1,21 @@
+import java.util.Scanner;
+
 public class AtividadeBanco {
     public static void main(String[] args) {
+        menu();
+
+    }
+    static void menu(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\n=========== Calculadora de taxas ============\n");
+        System.out.println("\t1 - Taxa Transferencia\n\t2 - Taxa Saque");
+        System.out.println("===============================================");
+        System.out.print("Escolha uma opcao do menu: ");
+        int opcao = Integer.parseInt(sc.nextLine());
+        System.out.println();
+    }
+    static void Feito()
+    {
         CalculadoraTaxas calcTaxas = new CalculadoraTaxas();
 
         double taxaT1 = calcTaxas.calculaTaxaTransferencia(1000);
@@ -16,6 +32,5 @@ public class AtividadeBanco {
 
         System.out.printf("Os valores de taxa de saque foram  %.2f, %.2f, %.2f, %.2f, %.2f e %.2f\n", 
             taxaS1, taxaS2, taxaS3, taxaS4, taxaS5, taxaS6);
-
     }
 }
