@@ -1,3 +1,4 @@
+package P1;
 
 public class PessoaJuridica extends Pessoa{
     private String nome_fantasia;    

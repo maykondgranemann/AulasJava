@@ -1,3 +1,4 @@
+package P1;
 
 // Heranca - extends
 public class PessoaFisica extends Pessoa { 
