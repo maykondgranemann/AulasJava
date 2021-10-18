@@ -1,3 +1,4 @@
+package P1;
 public class Main {
     public static void main(String[] args) {
         Produto produto1 = new Produto();
@@ -16,7 +17,7 @@ public class Main {
         imprimir(eletrodomestico1);
     }
 
-    public static void imprimir(Object obj){        
+    public static void imprimir(Object obj){  
        
         if( obj instanceof Eletrodomestico ){
             System.out.println("É um eletrodomestico");            
