@@ -1,3 +1,4 @@
+package P1;
 
 public class PrimeirosErros{
     public static void main(String[] args) {
