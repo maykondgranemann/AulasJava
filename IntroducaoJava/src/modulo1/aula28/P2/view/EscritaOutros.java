@@ -16,7 +16,7 @@ import java.io.Writer;
 public class EscritaOutros {
     public static void main(String[] args) {
         try {
-            InputStream fis = new FileInputStream("P2/dados/teclado.txt");
+            InputStream fis = new FileInputStream("P2/dados/teclado.txt"); // System.in
             Reader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
 
@@ -28,6 +28,7 @@ public class EscritaOutros {
             while(linha != null && !linha.equals("q")){
                 linha = br.readLine();
                 bw.write(linha+"\n");                
+                //bw.flush(); // salva imediatamente
             }
             br.close();
             bw.close();
