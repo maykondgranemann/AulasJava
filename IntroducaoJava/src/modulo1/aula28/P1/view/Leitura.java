@@ -12,7 +12,7 @@ public class Leitura {
 
         // criando o fluxo de entrada atraves de um arquivo
         try {
-            FileInputStream fis = new FileInputStream("dados/pratos.txt");
+            FileInputStream fis = new FileInputStream("P1/dados/pratos.txt");
             //System.out.println(fis.read());
             InputStreamReader isr = new InputStreamReader(fis);
             // char[] dados = new char[5];
