@@ -1,35 +1,28 @@
 package view;
 
-import java.sql.Statement;
+import java.util.Scanner;
 
+import dao.CategoriaDao;
 import model.Categoria;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import utils.ConnectionFactory;
 
 public class ViewCreate {
     public static void main(String[] args) {
-        try(Connection conn = new ConnectionFactory().getConnection()) {
-            Categoria model = new Categoria();
-            model.setNome("Teste Model Insert");
-            
-            String sql = "INSERT INTO categoria(nome)values(?)";
-            PreparedStatement prepStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            prepStatement.setString(1, model.getNome());
+        CategoriaDao dao = new CategoriaDao();
 
-            prepStatement.execute();            
-            ResultSet ids = prepStatement.getGeneratedKeys();
+        Categoria model = new Categoria(); 
 
-            while(ids.next()){
-                int id = ids.getInt("id");
-                System.out.println(id);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        try (Scanner sc = new Scanner(System.in)) {
+
+            System.out.print("\nDigite a cat1:");
+            model.setNome(sc.nextLine());    
+           
+        } catch (Exception e) {
+            System.out.println("Erro ao ler");
         }
+
+        dao.insert(model);      
     }
+
+    
 }
