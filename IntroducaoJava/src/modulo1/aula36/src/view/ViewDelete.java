@@ -1,10 +1,10 @@
-package view;
+package src.view;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import dao.CategoriaDao;
-import dao.ConnectionFactory;
+import src.dao.CategoriaDao;
+import src.dao.ConnectionFactory;
 
 public class ViewDelete{
     public static void main(String[] args) {

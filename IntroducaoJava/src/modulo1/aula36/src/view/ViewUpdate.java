@@ -1,11 +1,11 @@
-package view;
+package src.view;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import dao.CategoriaDao;
-import dao.ConnectionFactory;
-import model.Categoria;
+import src.dao.CategoriaDao;
+import src.dao.ConnectionFactory;
+import src.model.Categoria;
 
 public class ViewUpdate {
     public static void main(String[] args) {
