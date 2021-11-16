@@ -5,9 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.Categoria;
 import utils.ConnectionFactory;
 
-public class View4 {
+public class ViewRead {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection()) {            
             
@@ -15,9 +16,11 @@ public class View4 {
             prepStatement.execute();
             ResultSet result = prepStatement.getResultSet();
             while(result.next()){
-                int id = result.getInt("id");
-                String nome = result.getString("nome");
-                System.out.printf("%d - %s\n", id, nome);
+                Categoria model = new Categoria();                
+                model.setId(result.getInt("id"));
+                model.setNome(result.getString("nome"));
+
+                System.out.printf("%d - %s\n", model.getId(), model.getNome());
             }
         } catch (SQLException e) {
             e.printStackTrace();

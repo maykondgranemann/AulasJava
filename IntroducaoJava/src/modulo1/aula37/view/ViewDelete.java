@@ -4,18 +4,21 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import model.Categoria;
 import utils.ConnectionFactory;
 
-public class View1{
+public class ViewDelete{
     public static void main(String[] args) {
         // try with resources
         try(Connection conn = new ConnectionFactory().getConnection()) 
-        {            
-            int idDeletado = 27;            
+        {    
+            Categoria model = new Categoria();
+            model.setId(28);      
+
             String sql = "DELETE FROM categoria WHERE id = ?";
 
             try ( PreparedStatement prepStatement = conn.prepareStatement(sql)) {
-                prepStatement.setInt(1, idDeletado);
+                prepStatement.setInt(1, model.getId());
                 prepStatement.execute();   
                 int linhasAfetadas = prepStatement.getUpdateCount();
                 System.out.println(linhasAfetadas);    
