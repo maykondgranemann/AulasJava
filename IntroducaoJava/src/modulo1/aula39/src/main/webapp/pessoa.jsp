@@ -8,11 +8,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="ISO-8859-1">
-		<title>Pessoa</title>
+		<meta charset="utf-8">
+		<title>Pesso</title>
 	</head>
 	<body>
-		<h1>Pessoa</h1>
+		<h1>Pessoa olá</h1>
 		<%= nome %>
 	</body>
 </html>

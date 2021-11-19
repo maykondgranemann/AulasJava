@@ -24,7 +24,7 @@ public class Produto extends HttpServlet {
 		PrintWriter out = resp.getWriter();	
 	
 		for (String p : produtos) {
-			out.printf("<h1>%s</h1>", p);
+			out.printf("<h1>%s </h1>", p);
 		}
 	}
 }
