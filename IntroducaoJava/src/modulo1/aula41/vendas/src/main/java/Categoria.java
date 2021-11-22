@@ -12,8 +12,10 @@ public class Categoria extends HttpServlet{
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String nome = req.getParameter("nome");
+
         PrintWriter out = resp.getWriter();
-        out.println("Modulo Categoria");
+        out.printf("Modulo Categoria -- cat = %s", nome );
     }
     
 }
