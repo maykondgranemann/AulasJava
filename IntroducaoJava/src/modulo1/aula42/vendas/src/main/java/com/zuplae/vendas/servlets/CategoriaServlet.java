@@ -3,6 +3,7 @@ package com.zuplae.vendas.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import com.zuplae.vendas.dao.CategoriaDao;
 import com.zuplae.vendas.models.Categoria;
 
 import jakarta.servlet.ServletException;
@@ -16,13 +17,16 @@ public class CategoriaServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Categoria cat1 = new Categoria();
+        CategoriaDao dao = new CategoriaDao();
+        Categoria model = new Categoria();
 
-        cat1.setNome(req.getParameter("nome"));
-        cat1.setDescricao(req.getParameter("descricao"));
+        model.setNome(req.getParameter("nome"));
+        model.setDescricao(req.getParameter("descricao"));
+
+        model.setId(dao.insert(model));
 
         PrintWriter out = resp.getWriter();
-        out.printf("Modulo Categoria -- CategoriaModel = %s - %s", cat1.getNome(), cat1.getDescricao() );
+        out.printf("Categoria Salva com sucesso- Id gerado %d", model.getId());
     }
     
 }
