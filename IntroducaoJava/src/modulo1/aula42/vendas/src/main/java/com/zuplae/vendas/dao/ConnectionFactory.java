@@ -11,10 +11,6 @@ public class ConnectionFactory {
 
     public ConnectionFactory() {
         ComboPooledDataSource pool = new ComboPooledDataSource();
-        pool.setJdbcUrl("jdbc:postgresql://192.168.0.18:5432/postgres");
-        pool.setUser("postgres");
-        pool.setPassword("123456");
-        pool.setMaxPoolSize(10);
         this.dataSource = pool;
     }
 
