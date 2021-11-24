@@ -24,6 +24,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,10 @@
                 <tr>
                     <td><%= model.getId() %></td>
                     <td><%= model.getNome() %></td>
+                    <td>
+                        <a href="/vendas-1/categoria/carregar?id=<%= model.getId() %>">Alterar</a> |
+                        <a href="/vendas-1/categoria/deletar?id=<%= model.getId() %>">Deletar</a>
+                    </td>
                 </tr>
             <%}%>
         </tbody>

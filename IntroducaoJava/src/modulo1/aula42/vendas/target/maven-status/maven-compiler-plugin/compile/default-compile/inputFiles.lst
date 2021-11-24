@@ -1,7 +1,10 @@
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\servlets\CategoriaReadServlet.java
+c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\servlets\CategoriaAlterarServlet.java
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\servlets\CategoriaServlet.java
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\dao\CategoriaDao.java
+c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\servlets\CategoriaBuscarIdServlet.java
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\models\Categoria.java
+c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\servlets\CategoriaDeletarServlet.java
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\models\Produto.java
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\servlets\ProdutoServlet.java
 c:\Users\mdg\Documents\github\AulasJava\IntroducaoJava\src\modulo1\aula42\vendas\src\main\java\com\zuplae\vendas\dao\ConnectionFactory.java
