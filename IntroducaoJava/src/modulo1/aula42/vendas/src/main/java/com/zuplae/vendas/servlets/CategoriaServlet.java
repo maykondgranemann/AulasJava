@@ -1,7 +1,6 @@
 package com.zuplae.vendas.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import com.zuplae.vendas.dao.CategoriaDao;
 import com.zuplae.vendas.models.Categoria;
@@ -26,6 +25,7 @@ public class CategoriaServlet extends HttpServlet{
         int id = dao.insert(model);
 
         model.setId(id);
+        
         req.setAttribute("id", model.getId());
 
         

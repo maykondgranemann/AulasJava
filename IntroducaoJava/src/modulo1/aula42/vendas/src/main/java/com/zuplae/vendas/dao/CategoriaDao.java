@@ -29,22 +29,40 @@ public class CategoriaDao {
         }
         return idGerado;
     }
+    public ArrayList<Categoria> read(String nome) {
+
+        ArrayList<Categoria> list = new ArrayList<Categoria>();
+        try(Connection conn = new ConnectionFactory().getConnection()) {
+            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria WHERE nome = ?");
+            prepStatement.setString(1, nome);
+            prepStatement.execute();
+            ResultSet result = prepStatement.getResultSet();
+            list = createList(result);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } 
+        return list;
+    }
 	public ArrayList<Categoria> read() {
         ArrayList<Categoria> list = new ArrayList<Categoria>();
 
-        try(Connection conn = new ConnectionFactory().getConnection()) {            
-            
+        try(Connection conn = new ConnectionFactory().getConnection()) {           
             PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
             prepStatement.execute();
             ResultSet result = prepStatement.getResultSet();
-            while(result.next()){
-                Categoria model = new Categoria();                
-                model.setId(result.getInt("id"));
-                model.setNome(result.getString("nome"));
-                list.add(model);
-            }
+            list = createList(result);
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return list;
+    }
+    private ArrayList<Categoria> createList(ResultSet result) throws SQLException {
+        ArrayList<Categoria> list = new ArrayList<Categoria>();
+        while(result.next()){
+            Categoria model = new Categoria();                
+            model.setId(result.getInt("id"));
+            model.setNome(result.getString("nome"));
+            list.add(model);
         }
         return list;
     }
