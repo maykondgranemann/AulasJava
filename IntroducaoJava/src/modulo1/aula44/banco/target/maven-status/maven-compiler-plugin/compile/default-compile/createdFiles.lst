@@ -1,0 +1,7 @@
+com\zuplae\model\Categoria.class
+com\zuplae\dao\ConnectionFactory.class
+com\zuplae\AppCategoria.class
+com\zuplae\AppConta.class
+com\zuplae\dao\ContaCorrenteDao.class
+com\zuplae\dao\CategoriaDao.class
+com\zuplae\model\ContaCorrente.class
