@@ -5,19 +5,8 @@ import javax.persistence.EntityManager;
 
 import com.zuplae.model.ContaCorrente;
 
-public class ContaCorrenteRepository {
+public class ContaCorrenteRepository  extends BaseRespository<ContaCorrente>{
     private EntityManager entityManager;
-
-    public ContaCorrenteRepository() {
-        this.entityManager = new ConnectionFactory().getConnection();     
-    }
-
-    public int create(ContaCorrente model){
-        this.entityManager.getTransaction().begin();
-        this.entityManager.persist(model);        
-        this.entityManager.getTransaction().commit();
-        return model.getId();
-    }
 
     public List<ContaCorrente> read(){
         return this.entityManager
@@ -25,11 +14,6 @@ public class ContaCorrenteRepository {
             .getResultList();
     }
 
-    public void update(ContaCorrente model){
-        this.entityManager.getTransaction().begin();
-        this.entityManager.merge(model);        
-        this.entityManager.getTransaction().commit();
-    }
     public void delete(int id){
         ContaCorrente model = this.entityManager.find(ContaCorrente.class, id);
         if(model != null){
