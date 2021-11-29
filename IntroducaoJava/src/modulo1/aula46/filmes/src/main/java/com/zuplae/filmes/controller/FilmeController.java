@@ -29,7 +29,7 @@ public class FilmeController {
 
     @GetMapping("/filme/form")
     public String formulario(Model req){
-        Filme model = new Filme();
+        Filme model = new Filme();        
         req.addAttribute("filme", model);
         return "filmes-form";
     }
