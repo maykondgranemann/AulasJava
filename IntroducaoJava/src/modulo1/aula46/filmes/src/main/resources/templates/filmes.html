@@ -10,6 +10,23 @@
     <h1>Filmes</h1>
     <h2>Lista de filmes</h2>
 
-    <h5 th:text="${nome}" >Filme Padrão</h5>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Nome Diretor</th>
+                <th>Genero</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="f : ${filmes}">
+                <td th:text="${f.id}"></td>
+                <td th:text="${f.nome}"></td>
+                <td th:text="${f.nomeDiretor}"></td>
+                <td th:text="${f.genero}"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
