@@ -19,6 +19,7 @@
                 <th>Nome</th>
                 <th>Nome Diretor</th>
                 <th>Genero</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,10 @@
                 <td th:text="${f.nome}"></td>
                 <td th:text="${f.nomeDiretor}"></td>
                 <td th:text="${f.genero}"></td>
+                <td>
+                    <a th:href="@{'/filme/editar/'+${f.id}}">Editar</a> |
+                    <a th:href="@{'/filme/deletar/'+${f.id}}">Deletar</a>
+                </td>
             </tr>
         </tbody>
     </table>
