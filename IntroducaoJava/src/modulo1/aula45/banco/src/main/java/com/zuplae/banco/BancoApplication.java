@@ -43,7 +43,7 @@ public class BancoApplication implements CommandLineRunner {
 		repository.deleteById(1);
 		
 		System.out.println("\n");
-		repository.findAll().forEach(f -> System.out.printf("%d - %s\n", f.getId(), f.getNome()));
+		repository.findAll().forEach(f -> System.out.printf("%d - %s\n", f.getId(), f.getNome()));				
 		System.out.println("\n");
 	}
 
