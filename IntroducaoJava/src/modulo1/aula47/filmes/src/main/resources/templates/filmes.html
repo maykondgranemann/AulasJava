@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head th:replace="~{base::head(Filmes)}"></head>
+<body>
+    <header th:replace="~{base::cabecalho}"></header>
+    
+    <main>
+        <h1 class="titulo">Filmes</h1>
+        <h2>Lista de filmes</h2>
+        
+        <a class="btn btn-success esquerda" href="/filme/form">Cadastrar novo</a>
+        <br />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Nome Diretor</th>
+                    <th>Genero</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="f : ${filmes}">
+                    <td th:text="${f.id}"></td>
+                    <td th:text="${f.nome}"></td>
+                    <td th:text="${f.nomeDiretor}"></td>
+                    <td th:text="${f.genero}"></td>
+                    <td>
+                        <a class="btn btn-warning" th:href="@{'/filme/editar/'+${f.id}}">Editar</a>
+                        <a class="btn btn-danger" th:href="@{'/filme/deletar/'+${f.id}}">Deletar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>    
+</body>
+</html>
