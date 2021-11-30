@@ -20,8 +20,13 @@ public class FilmeController {
     }
 
     @GetMapping("/filme")
-    public String filmes(Model req){
-        List<Filme> lista = (List<Filme>)repository.findAll();
+    public String filmes(Model req, String nome){
+        List<Filme> lista;
+        if(nome != null){
+            lista =  (List<Filme>)repository.findByNome(nome) ;
+        }else{
+            lista = (List<Filme>)repository.findAll();
+        }
         req.addAttribute("filmes", lista);
         return "filmes";
         
