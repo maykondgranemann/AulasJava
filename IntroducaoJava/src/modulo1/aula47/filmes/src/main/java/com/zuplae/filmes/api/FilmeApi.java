@@ -27,8 +27,12 @@ public class FilmeApi {
         if(nome != null){
             return (List<Filme>)repository.findByNome(nome) ;
         }
-        return (List<Filme>)repository.findAll();
-     
+        return (List<Filme>)repository.findAll();     
+    }
+    
+    @GetMapping("/{id}")    
+    public Filme buscarPorId(@PathVariable int id){
+        return repository.findById(id).get();        
     }
     
     @PostMapping  
